@@ -144,7 +144,7 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
         int length = to_split.length();
         ret.append(to_split.charAt(0));
-        for (int i = 0; i <= length; i++){
+        for (int i = 0; i <= length - 1; i++){
             char curchar = to_split.charAt(i);
             if (curchar == (' ')) {
                 ret.append(to_split.charAt(i - 1));
@@ -180,7 +180,7 @@ public class Basics {
         if (arr.length <= 1) {
             return current_sum;
         }
-        for (int i = 0; i <= arr.length; i++) {
+        for (int i = 0; i <= arr.length - 1; i++) {
             if (i % 2 != 0) {
                 current_sum = current_sum + arr[i];
             }
