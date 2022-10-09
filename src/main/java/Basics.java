@@ -141,14 +141,17 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
-        StringBuilder ret = new StringBuilder();
+       StringBuilder ret = new StringBuilder();
         int length = to_split.length();
         ret.append(to_split.charAt(0));
-        for (int i = 0; i <= length - 1; i++){
-            char curchar = to_split.charAt(i);
+        int loc = 1;
+        while (loc <= length) {
+            char curchar = to_split.charAt(loc);
             if (curchar == (' ')) {
-                ret.append(to_split.charAt(i - 1));
+                ret.append(to_split.charAt(loc - 1));
             }
+            loc++;
+
             }
 
         return ret.toString();
